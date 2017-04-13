@@ -4,13 +4,13 @@
 [![](https://jitpack.io/v/Lauzy/LBehavior.svg)](https://jitpack.io/#Lauzy/LBehavior)
 
 
-#效果图
+# 效果图
 
 
 <img src="/screenshoots/screen1.gif" alt="screenshot" title="screenshot" width="270" height="460" /> <img src="/screenshoots/screen2.gif" alt="screenshot" title="screenshot" width="270" height="460" /> <img src="/screenshoots/screen3.gif" alt="screenshot" title="screenshot" width="270" height="460" />
 
 
-#Download
+##Download
 ```java
     allprojects {
 		repositories {
@@ -25,7 +25,7 @@
 
 ```
 
-#Usage
+# Usage
 
 
 基本使用：
@@ -79,9 +79,9 @@
 ```
 
 
-##Apk and More Info
+## Apk and More Info
 
-For more usage, you can download or clone the demo. You can also [download the demo apk]().
+For more usage, you can download or clone the demo. You can also [download the demo apk](https://github.com/Lauzy/LBehavior/raw/master/apk/demo.apk).
 
 
 
