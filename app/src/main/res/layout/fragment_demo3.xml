@@ -2,6 +2,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragment_main"
+    android:paddingBottom="55dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -41,11 +42,11 @@
         android:layout_marginBottom="75dp"
         android:layout_marginLeft="20dp"
         android:backgroundTint="#FFFFFF"
+        android:layout_gravity="bottom|left"
         android:clickable="true"
         app:borderWidth="0dp"
         app:elevation="7dp"
         app:fabSize="mini"
-        app:layout_anchor="@id/nsv_content"
         app:layout_anchorGravity="bottom|left"
         app:layout_behavior="@string/fab_vertical_behavior"
         app:srcCompat="@mipmap/icon_fab_mode"/>
