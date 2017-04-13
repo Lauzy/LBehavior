@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_main_item_beauty"
+        android:checked="true"
+        android:icon="@mipmap/icon_bottom_meizhi_unselected"
+        android:title="@string/bottom_main_item_beauty"/>
+
+    <item
+        android:id="@+id/menu_main_item_android"
+        android:icon="@mipmap/icon_bottom_android_unselected"
+        android:title="@string/bottom_main_item_android"/>
+
+    <item
+        android:id="@+id/menu_main_item_category"
+        android:icon="@mipmap/icon_bottom_more_unselected"
+        android:title="@string/bottom_main_item_category"/>
+
+    <item
+        android:id="@+id/menu_main_item_mine"
+        android:icon="@mipmap/icon_bottom_mine_unselected"
+        android:title="@string/bottom_main_item_mine"/>
+</menu>

@@ -1,0 +1,55 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nsv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:lineSpacingExtra="15dp"
+                android:lineSpacingMultiplier="3"
+                android:text="@string/test_poem"/>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="75dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:clickable="true"
+        app:borderWidth="0dp"
+        app:elevation="7dp"
+        app:fabSize="mini"
+        app:layout_anchor="@id/nsv_content"
+        app:layout_anchorGravity="bottom|left"
+        app:layout_behavior="@string/fab_vertical_behavior"
+        app:srcCompat="@mipmap/icon_fab_mode"/>
+
+</android.support.design.widget.CoordinatorLayout>
+
+

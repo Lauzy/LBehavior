@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/frame_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_bottom"
+        android:layout_marginBottom="75dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:clickable="true"
+        android:stateListAnimator="@null"
+        app:borderWidth="0dp"
+        app:elevation="4dp"
+        app:fabSize="auto"
+        app:layout_anchor="@id/frame_main"
+        app:layout_anchorGravity="bottom|end"
+        app:layout_behavior="@string/fab_vertical_behavior"
+        app:srcCompat="@mipmap/icon_fab_mode"/>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_main_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom"
+        android:background="@color/color_style"
+        android:elevation="5dp"
+        app:layout_behavior="@string/bottom_view_behavior"
+        app:menu="@menu/menu_bottom_navigation_view"/>
+
+</android.support.design.widget.CoordinatorLayout>
+
+

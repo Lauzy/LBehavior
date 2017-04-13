@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_demo1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom"
+        android:background="@color/color_style"
+        android:elevation="5dp"
+        android:orientation="horizontal"
+        app:layout_behavior="@string/bottom_view_behavior">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="底部可自定义放置任何View"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_bottom"
+        android:layout_marginBottom="75dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:clickable="true"
+        app:borderWidth="0dp"
+        app:elevation="4dp"
+        app:fabSize="auto"
+        app:layout_anchor="@id/rv_demo1"
+        app:layout_anchorGravity="bottom|end"
+        app:layout_behavior="@string/fab_vertical_behavior"
+        app:srcCompat="@mipmap/icon_fab_mode"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab2_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_bottom"
+        android:layout_marginBottom="75dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:clickable="true"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:fabSize="auto"
+        app:layout_anchor="@id/rv_demo1"
+        app:layout_anchorGravity="bottom|start"
+        app:layout_behavior="@string/fab_vertical_behavior"
+        app:srcCompat="@mipmap/icon_fab_mode"/>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab3_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_bottom"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:clickable="true"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:fabSize="auto"
+        app:layout_anchor="@id/rv_demo1"
+        app:layout_anchorGravity="top|start"
+        app:layout_behavior="@string/fab_scale_behavior"
+        app:srcCompat="@mipmap/icon_fab_mode"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab4_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_bottom"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:clickable="true"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:fabSize="auto"
+        app:layout_anchor="@id/rv_demo1"
+        app:layout_anchorGravity="top|end"
+        app:layout_behavior="@string/fab_scale_behavior"
+        app:srcCompat="@mipmap/icon_fab_mode"/>
+
+
+</android.support.design.widget.CoordinatorLayout>
+
+
