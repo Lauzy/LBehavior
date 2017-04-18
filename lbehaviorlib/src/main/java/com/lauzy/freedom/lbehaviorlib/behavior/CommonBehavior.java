@@ -3,23 +3,17 @@ package com.lauzy.freedom.lbehaviorlib.behavior;
 
 import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;
-import android.support.v4.view.NestedScrollingChild;
 import android.support.v4.view.animation.LinearOutSlowInInterpolator;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Interpolator;
-import android.widget.LinearLayout;
 
 import com.lauzy.freedom.lbehaviorlib.anim.CommonAnim;
 import com.lauzy.freedom.lbehaviorlib.anim.LBottomBehaviorAnim;
 
-
+@SuppressWarnings("unused")
 public class CommonBehavior extends CoordinatorLayout.Behavior<View> {
     private static final String LYTAG = LTitleBehavior.class.getSimpleName();
     protected CommonAnim mCommonAnim;
@@ -76,8 +70,7 @@ public class CommonBehavior extends CoordinatorLayout.Behavior<View> {
      * @param target            触发滑动嵌套的View(实现NestedScrollingChild接口)
      * @param dx                滑动的X轴距离
      * @param dy                滑动的Y轴距离
-     * @param consumed          父布局消费的滑动距离，consumed[0]和consumed[1]代表X和Y方向父布局消费的距离，默认为0（如鸿神的例子中（http://blog.csdn.net/lmj623565791/article/details/52204039）
-     *                          若设置为dy/2，则父布局消费一半,Target消费一半）
+     * @param consumed          父布局消费的滑动距离，consumed[0]和consumed[1]代表X和Y方向父布局消费的距离，默认为0
      */
     @Override
     public void onNestedPreScroll(CoordinatorLayout coordinatorLayout, View child, View target, int dx, int dy, int[] consumed) {
@@ -139,10 +132,9 @@ public class CommonBehavior extends CoordinatorLayout.Behavior<View> {
                     int recyclerBottom = recyclerView.getBottom() - recyclerView.getPaddingBottom();
                     int lastPosition = recyclerView.getLayoutManager().getPosition(lastChildView);
                     if (lastChildBottom == recyclerBottom && lastPosition == recyclerView.getLayoutManager().getItemCount() - 1) {
-                        show();//
+                        show();//测试滑动到底部，显示bottomBar
                     }
                 }
-
             });
         }
     }
