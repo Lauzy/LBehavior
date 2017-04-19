@@ -18,12 +18,12 @@ public class LBottomBehaviorAnim extends CommonAnim{
     }
 
     public void hideBottom() {
-//        ValueAnimator va = ValueAnimator.ofFloat(mBottomView.getY(), mBottomView.getY() + mBottomView.getHeight());
+//        ValueAnimator animator = ValueAnimator.ofFloat(mBottomView.getY(), mBottomView.getY() + mBottomView.getHeight());
 
     }
 
     public void showBottom() {
-//        ValueAnimator va = ValueAnimator.ofFloat(mBottomView.getY(), mBottomView.getY() - mBottomView.getHeight());//Y值会发生变化，采用全局OriginalY
+//        ValueAnimator animator = ValueAnimator.ofFloat(mBottomView.getY(), mBottomView.getY() - mBottomView.getHeight());//Y值会发生变化，采用全局OriginalY
 
     }
 

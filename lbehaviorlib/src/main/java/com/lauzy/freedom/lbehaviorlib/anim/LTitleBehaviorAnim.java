@@ -16,13 +16,6 @@ public class LTitleBehaviorAnim extends CommonAnim{
         mHeadView = headView;
     }
 
-    public void hideTitle() {
-
-    }
-
-    public void showTitle() {
-    }
-
     @Override
     public void show() {
         ValueAnimator animator = ValueAnimator.ofFloat(mHeadView.getY(), 0);
