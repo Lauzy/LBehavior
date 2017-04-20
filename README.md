@@ -26,6 +26,7 @@
 	}
 
     dependencies {
+        compile 'com.android.support:design:25.3.1'(latestVersion)
 	    compile 'com.github.Lauzy:LBehavior:1.0.1'
 	}
 
@@ -41,7 +42,7 @@
 ```xml
     <android.support.design.widget.CoordinatorLayout
         ...>
-		<View
+		<FloatingActionButton
  			...
 			app:layout_behavior="@string/fab_vertical_behavior/>
     </android.support.design.widget.CoordinatorLayout>
