@@ -26,8 +26,8 @@
 	}
 
     dependencies {
-        compile 'com.android.support:design:25.3.1'(latestVersion)
-	    compile 'com.github.Lauzy:LBehavior:1.0.1'
+            compile 'com.android.support:design:25.3.1'(latestVersion)
+	        compile 'com.github.Lauzy:LBehavior:1.0.1'
 	}
 
 ```
