@@ -118,7 +118,8 @@ public class CommonBehavior extends CoordinatorLayout.Behavior<View> {
     @Override
     public void onStopNestedScroll(CoordinatorLayout coordinatorLayout, View child, final View target) {
         super.onStopNestedScroll(coordinatorLayout, child, target);
-        if (target instanceof RecyclerView && mCommonAnim instanceof LBottomBehaviorAnim) {
+        //也可采用dyUnconsumed判断
+        /*if (target instanceof RecyclerView && mCommonAnim instanceof LBottomBehaviorAnim) {
             ((RecyclerView) target).addOnScrollListener(new RecyclerView.OnScrollListener() {
                 @Override
                 public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
@@ -136,7 +137,7 @@ public class CommonBehavior extends CoordinatorLayout.Behavior<View> {
                     }
                 }
             });
-        }
+        }*/
     }
 
     public void setCanScroll(boolean canScroll) {
