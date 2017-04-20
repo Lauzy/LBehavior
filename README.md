@@ -10,6 +10,12 @@
 <img src="/screenshoots/screen1.gif" alt="screenshot" title="screenshot" width="270" height="460" /> <img src="/screenshoots/screen2.gif" alt="screenshot" title="screenshot" width="270" height="460" /> <img src="/screenshoots/screen3.gif" alt="screenshot" title="screenshot" width="270" height="460" />
 
 
+# 博客介绍
+
+简书:[http://www.jianshu.com/p/2974d8ffc3a5](http://www.jianshu.com/p/2974d8ffc3a5)
+
+个人网站:[http://lauzy.me/2017/04/14/Behavior/](http://lauzy.me/2017/04/14/Behavior/)
+
 ## Download
 ```java
     allprojects {
