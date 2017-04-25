@@ -27,10 +27,10 @@
 
     dependencies {
         compile 'com.android.support:design:25.3.1'(latestVersion)
-        compile 'com.github.Lauzy:LBehavior:1.0.1'
+        compile 'com.github.Lauzy:LBehavior:[VERSION_CODE](https://github.com/Lauzy/LBehavior/releases)'
 	}
-
 ```
+The version code of the latest release can be found [here](https://github.com/Lauzy/LBehavior/releases)
 
 # Usage
 
