@@ -57,10 +57,10 @@ Set different layout_behavior in xml file according to different view.
 
 Param     							|	Explanation
 -----------------------------------|-----------------------
-@string/title_view_behavior   		|   Title Layout
-@string/bottom_view_behavior   	|   Bottom Layout
-@string/fab_scale_behavior   		|   FloatingActionBar（scale anim）
-@string/fab_vertical_behavior   	|   FloatingActionBar（slide anim）
+@string/title_view_behavior   		|   TitleBar
+@string/bottom_view_behavior   	|   BottomBar
+@string/fab_scale_behavior   		|   FloatingActionButton（scale anim）
+@string/fab_vertical_behavior   	|   FloatingActionButton（slide anim）
 
 
 
@@ -89,7 +89,7 @@ Custom properties(All have default values)：
 
 ## Tips
 
-1、Because the root layout is CoordinatorLayout, the toolbar may cover the item at the top of the recyclerView when used, and the bottom layout may also cover the bottom item.
+1、Because the root layout is CoordinatorLayout, the toolbar may cover the item at the top of the recyclerView when used, and the bottom bar may also cover the bottom item.
 You can add a placeholder such as itemDecoration to the recyclerView, or a placeholder view at the top. If the situation is relatively simple, you can simply set padding, margin and so on.
 I have dealt with this kind of situation in the demo simply.
 
