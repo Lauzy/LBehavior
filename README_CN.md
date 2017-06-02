@@ -1,4 +1,4 @@
-## LBehavior 简单实现标题栏、导航栏滑动动画
+## LBehavior 简单实现标题栏、导航栏、悬浮按钮的滑动动画
 
 
 [![](https://jitpack.io/v/Lauzy/LBehavior.svg)](https://jitpack.io/#Lauzy/LBehavior)
@@ -12,11 +12,14 @@
 
 # 博客介绍
 
+CSDN: [http://blog.csdn.net/freedompaladin/article/details/70253391](http://blog.csdn.net/freedompaladin/article/details/70253391)
+
 简书:[http://www.jianshu.com/p/2974d8ffc3a5](http://www.jianshu.com/p/2974d8ffc3a5)
 
 个人网站:[http://lauzy.me/2017/04/14/Behavior/](http://lauzy.me/2017/04/14/Behavior/)
 
-## Download
+## 下载
+
 ```java
     allprojects {
 	    repositories {
@@ -30,9 +33,9 @@
         compile 'com.github.Lauzy:LBehavior:VERSION_CODE'
 	}
 ```
-The version code of the latest release can be found [here](https://github.com/Lauzy/LBehavior/releases)
+最新版本号，点击[这里](https://github.com/Lauzy/LBehavior/releases)
 
-# Usage
+# 用法
 
 
 基本使用：
@@ -95,6 +98,22 @@ The version code of the latest release can be found [here](https://github.com/La
 2、FloatingActionButton的elevation若大于BottomBar的elevation，则FloatingActionButton动画覆盖在BottomBar上层，反之则在下层，为gif的下部两个按钮的效果。
 
 
-## Apk and More Info
+## Demo
 
-For more usage, you can download or clone the demo. You can also [download the demo apk](https://github.com/Lauzy/LBehavior/raw/master/apk/demo.apk).
+欢迎下载项目和[体验Apk](https://github.com/Lauzy/LBehavior/raw/master/apk/demo.apk).
+
+# 开源协议
+
+Copyright 2017 Lauzy
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
