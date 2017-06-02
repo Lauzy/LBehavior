@@ -5,13 +5,13 @@
 
 [中文文档](/README_CN.md)
 
-# ScreenShoot
+## ScreenShoot
 
 
 <img src="/screenshoots/screen1.gif" alt="screenshot" title="screenshot" width="270" height="460" /> <img src="/screenshoots/screen2.gif" alt="screenshot" title="screenshot" width="270" height="460" /> <img src="/screenshoots/screen3.gif" alt="screenshot" title="screenshot" width="270" height="460" />
 
 
-# Blog Introduce
+## Blog Introduce
 
 CSDN: [http://blog.csdn.net/freedompaladin/article/details/70253391](http://blog.csdn.net/freedompaladin/article/details/70253391)
 
@@ -35,7 +35,7 @@ Personal WebSite: [http://lauzy.me/2017/04/14/Behavior/](http://lauzy.me/2017/04
 ```
 The version code of the latest release can be found [here](https://github.com/Lauzy/LBehavior/releases)
 
-# Usage
+## Usage
 
 
 Xml file：
@@ -70,9 +70,9 @@ Custom properties(All have default values)：
 | Function           	 	|    Param           	| Explanation  			|
 | ------------------------- |------------------ | --------------------- |
 | setMinScrollY				| int y 			| Sets the minimum sliding distance for triggering the animation. The default value is 5 pixels.|
-| setScrollYDistance		| int y      	    | Sets the sliding distance of triggering the animation. The animation can be triggered when the total sliding distance is greater or equals to this property, even if the single sliding distance is less than the minimum distance. The default value is 40 pixels.|
-| setDuration				| int duration     	| Sets the length of animation. The default value is 400 milliseconds.|
-| setInterpolator			| Interpolator interpolator | Sets the interpolator to be used by this animation.The default interpolator is LinearOutSlowInInterpolator. [Interpolator Official documentation](https://developer.android.google.cn/reference/android/view/animation/Interpolator.html)|
+| setScrollYDistance		| int y      	    | Sets the sliding distance of triggering the animation. The animation can be triggered when the total sliding distance is greater than this property, even if the single sliding distance is less than the minimum distance. The default value is 40 pixels.|
+| setDuration				| int duration     	| Sets the length of the animation. The default value is 400 milliseconds.|
+| setInterpolator			| Interpolator interpolator | Sets the interpolator to be used by this animation.The default interpolator is LinearOutSlowInInterpolator. [Interpolator official documentation](https://developer.android.google.cn/reference/android/view/animation/Interpolator.html)|
 
 
 ```java
@@ -90,8 +90,8 @@ Custom properties(All have default values)：
 ## Tips
 
 1、Because the root layout is CoordinatorLayout, the toolbar may cover the item at the top of the recyclerView when used, and the bottom layout may also cover the bottom item.
-You can add a placeholder such as itemDecoration to the recyclerView, a placeholder view at the top. If the situation is relatively simple, you can set padding, margin and so on.
-Details can be seen in the demo, I simply deal with this kind of situation.
+You can add a placeholder such as itemDecoration to the recyclerView, or a placeholder view at the top. If the situation is relatively simple, you can simply set padding, margin and so on.
+I have dealt with this kind of situation in the demo simply.
 
 
 2、If the elevation of the floatingActionButton is greater than that of the bottomBar, the animation of the floatingActionButton will cover the top of the bottomBar, and vice versa.
@@ -102,8 +102,8 @@ Details can be seen in the demo, I simply deal with this kind of situation.
 For more usage, you can download or clone the demo. You can also [download the demo apk](https://github.com/Lauzy/LBehavior/raw/master/apk/demo.apk).
 
 
-# License
-
+## License
+```
 Copyright 2017 Lauzy
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -117,7 +117,7 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
+```
 
 
 

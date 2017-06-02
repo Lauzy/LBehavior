@@ -4,13 +4,13 @@
 [![](https://jitpack.io/v/Lauzy/LBehavior.svg)](https://jitpack.io/#Lauzy/LBehavior)
 
 
-# 效果图
+## 效果图
 
 
 <img src="/screenshoots/screen1.gif" alt="screenshot" title="screenshot" width="270" height="460" /> <img src="/screenshoots/screen2.gif" alt="screenshot" title="screenshot" width="270" height="460" /> <img src="/screenshoots/screen3.gif" alt="screenshot" title="screenshot" width="270" height="460" />
 
 
-# 博客介绍
+## 博客介绍
 
 CSDN: [http://blog.csdn.net/freedompaladin/article/details/70253391](http://blog.csdn.net/freedompaladin/article/details/70253391)
 
@@ -35,7 +35,7 @@ CSDN: [http://blog.csdn.net/freedompaladin/article/details/70253391](http://blog
 ```
 最新版本号，点击[这里](https://github.com/Lauzy/LBehavior/releases)
 
-# 用法
+## 用法
 
 
 基本使用：
@@ -102,8 +102,8 @@ CSDN: [http://blog.csdn.net/freedompaladin/article/details/70253391](http://blog
 
 欢迎下载项目和[体验Apk](https://github.com/Lauzy/LBehavior/raw/master/apk/demo.apk).
 
-# 开源协议
-
+## 开源协议
+```
 Copyright 2017 Lauzy
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -117,3 +117,4 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+```
