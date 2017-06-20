@@ -13,8 +13,6 @@
 
 ## Blog Introduce
 
-CSDN: [http://blog.csdn.net/freedompaladin/article/details/70253391](http://blog.csdn.net/freedompaladin/article/details/70253391)
-
 JianShu: [http://www.jianshu.com/p/2974d8ffc3a5](http://www.jianshu.com/p/2974d8ffc3a5)
 
 Personal WebSite: [http://lauzy.me/2017/04/14/Behavior/](http://lauzy.me/2017/04/14/Behavior/)
@@ -70,7 +68,7 @@ Custom properties(All have default values)：
 | Function           	 	|    Param           	| Explanation  			|
 | ------------------------- |------------------ | --------------------- |
 | setMinScrollY				| int y 			| Sets the minimum sliding distance for triggering the animation. The default value is 5 pixels.|
-| setScrollYDistance		| int y      	    | Sets the sliding distance of triggering the animation. The animation can be triggered when the total sliding distance is greater than this property, even if the single sliding distance is less than the minimum distance. The default value is 40 pixels.|
+| setScrollYDistance		| int y      	    | Sets the sliding distance for triggering the animation. The animation can be triggered when the total sliding distance is greater than this property, even if the single sliding distance is less than the minimum distance. The default value is 40 pixels.|
 | setDuration				| int duration     	| Sets the length of the animation. The default value is 400 milliseconds.|
 | setInterpolator			| Interpolator interpolator | Sets the interpolator to be used by this animation.The default interpolator is LinearOutSlowInInterpolator. [Interpolator official documentation](https://developer.android.google.cn/reference/android/view/animation/Interpolator.html)|
 
