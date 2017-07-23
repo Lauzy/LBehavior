@@ -3,10 +3,6 @@ package com.lauzy.freedom.lbehaviorlib.anim;
 import android.animation.ValueAnimator;
 import android.view.View;
 
-/**
- * Created by Lauzy on 2017/3/14.
- */
-
 public class LTitleBehaviorAnim extends CommonAnim{
 
     private View mHeadView;

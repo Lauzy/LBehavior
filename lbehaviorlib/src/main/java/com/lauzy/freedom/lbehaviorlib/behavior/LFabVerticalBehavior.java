@@ -31,7 +31,8 @@ public class LFabVerticalBehavior extends CommonBehavior {
 
     //判断垂直滑动
     @Override
-    public boolean onStartNestedScroll(CoordinatorLayout coordinatorLayout, View child, View directTargetChild, View target, int nestedScrollAxes) {
+    public boolean onStartNestedScroll(CoordinatorLayout coordinatorLayout, View child,
+                                       View directTargetChild, View target, int nestedScrollAxes) {
         if (isInit) {
             mCommonAnim = new LFabVerticalBehaviorAnim(coordinatorLayout, child);
             isInit = false;

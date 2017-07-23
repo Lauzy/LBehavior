@@ -9,32 +9,12 @@ import android.view.View;
  * Created by Lauzy on 2017/3/15.
  */
 
-public class LFabScaleBehaviorAnim extends CommonAnim{
+public class LFabScaleBehaviorAnim extends CommonAnim {
 
     private View mFabView;
 
     public LFabScaleBehaviorAnim(View fabView) {
         mFabView = fabView;
-    }
-
-    public void hideFab() {
-
-        /*ValueAnimator anim = ValueAnimator.ofFloat(mFabView.getY(), mOriginalY + mFabView.getHeight());
-        anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                mFabView.setY((Float) valueAnimator.getAnimatedValue());
-            }
-        });
-        anim.setDuration(400);
-        anim.start();*/
-
-
-    }
-
-    public void showFab() {
-
-
     }
 
     @Override

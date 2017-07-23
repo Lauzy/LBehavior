@@ -17,7 +17,8 @@ public class LBottomBehavior extends CommonBehavior {
 
     //判断垂直滑动
     @Override
-    public boolean onStartNestedScroll(CoordinatorLayout coordinatorLayout, View child, View directTargetChild, View target, int nestedScrollAxes) {
+    public boolean onStartNestedScroll(CoordinatorLayout coordinatorLayout, View child,
+                                       View directTargetChild, View target, int nestedScrollAxes) {
         if (isInit) {
             mCommonAnim = new LBottomBehaviorAnim(child);
             isInit = false;

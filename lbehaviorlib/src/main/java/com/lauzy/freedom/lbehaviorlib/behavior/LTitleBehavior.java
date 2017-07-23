@@ -8,11 +8,6 @@ import android.view.View;
 
 import com.lauzy.freedom.lbehaviorlib.anim.LTitleBehaviorAnim;
 
-
-/**
- * Created by Lauzy on 2017/3/14.
- */
-
 public class LTitleBehavior extends CommonBehavior {
 
     public LTitleBehavior(Context context, AttributeSet attrs) {
@@ -21,7 +16,8 @@ public class LTitleBehavior extends CommonBehavior {
 
     //判断垂直滑动
     @Override
-    public boolean onStartNestedScroll(CoordinatorLayout coordinatorLayout, View child, View directTargetChild, View target, int nestedScrollAxes) {
+    public boolean onStartNestedScroll(CoordinatorLayout coordinatorLayout, View child,
+                                       View directTargetChild, View target, int nestedScrollAxes) {
         if (isInit) {
             mCommonAnim = new LTitleBehaviorAnim(child);
             isInit = false;

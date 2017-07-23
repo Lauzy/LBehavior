@@ -3,11 +3,7 @@ package com.lauzy.freedom.lbehaviorlib.anim;
 import android.animation.ValueAnimator;
 import android.view.View;
 
-/**
- * Created by Lauzy on 2017/3/14.
- */
-
-public class LBottomBehaviorAnim extends CommonAnim{
+public class LBottomBehaviorAnim extends CommonAnim {
 
     private View mBottomView;
     private float mOriginalY;
@@ -15,16 +11,6 @@ public class LBottomBehaviorAnim extends CommonAnim{
     public LBottomBehaviorAnim(View bottomView) {
         mBottomView = bottomView;
         mOriginalY = mBottomView.getY();
-    }
-
-    public void hideBottom() {
-//        ValueAnimator animator = ValueAnimator.ofFloat(mBottomView.getY(), mBottomView.getY() + mBottomView.getHeight());
-
-    }
-
-    public void showBottom() {
-//        ValueAnimator animator = ValueAnimator.ofFloat(mBottomView.getY(), mBottomView.getY() - mBottomView.getHeight());//Y值会发生变化，采用全局OriginalY
-
     }
 
     @Override

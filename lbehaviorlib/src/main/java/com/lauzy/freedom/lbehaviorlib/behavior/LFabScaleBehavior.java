@@ -8,11 +8,6 @@ import android.view.View;
 
 import com.lauzy.freedom.lbehaviorlib.anim.LFabScaleBehaviorAnim;
 
-
-/**
- * Created by Lauzy on 2017/3/15.
- */
-
 public class LFabScaleBehavior extends CommonBehavior {
 
     public LFabScaleBehavior(Context context, AttributeSet attrs) {
@@ -21,7 +16,8 @@ public class LFabScaleBehavior extends CommonBehavior {
 
     //判断垂直滑动
     @Override
-    public boolean onStartNestedScroll(CoordinatorLayout coordinatorLayout, View child, View directTargetChild, View target, int nestedScrollAxes) {
+    public boolean onStartNestedScroll(CoordinatorLayout coordinatorLayout, View child,
+                                       View directTargetChild, View target, int nestedScrollAxes) {
         if (isInit) {
             mCommonAnim = new LFabScaleBehaviorAnim(child);
             isInit = false;
