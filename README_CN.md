@@ -14,7 +14,7 @@
 
 简书:[http://www.jianshu.com/p/2974d8ffc3a5](http://www.jianshu.com/p/2974d8ffc3a5)
 
-个人网站:[http://lauzy.me/2017/04/14/201705Behavior/](http://lauzy.me/2017/04/14/201705Behavior/)
+个人网站:[http://blog.lauzy.me/2017/04/14/201705Behavior/](http://blog.lauzy.me/2017/04/14/201705Behavior/)
 
 ## 下载
 
