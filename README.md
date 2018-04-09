@@ -5,10 +5,10 @@
 
 [中文文档](/README_CN.md)
 
-## ScreenShoot
+## Screenshot
 
 
-<img src="/screenshoots/screen1.gif" alt="screenshot" title="screenshot" width="270" height="460" /> <img src="/screenshoots/screen2.gif" alt="screenshot" title="screenshot" width="270" height="460" /> <img src="/screenshoots/screen3.gif" alt="screenshot" title="screenshot" width="270" height="460" />
+<img src="/screenshots/screen1.gif" alt="screenshot" title="screenshot" width="270" height="460" /> <img src="/screenshots/screen2.gif" alt="screenshot" title="screenshot" width="270" height="460" /> <img src="/screenshots/screen3.gif" alt="screenshot" title="screenshot" width="270" height="460" />
 
 
 ## Blog Introduce
