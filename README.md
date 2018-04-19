@@ -5,7 +5,7 @@
 
 [中文文档](/README_CN.md)
 
-## Screenshot
+## Screenshots
 
 
 <img src="/screenshots/screen1.gif" alt="screenshot" title="screenshot" width="270" height="460" /> <img src="/screenshots/screen2.gif" alt="screenshot" title="screenshot" width="270" height="460" /> <img src="/screenshots/screen3.gif" alt="screenshot" title="screenshot" width="270" height="460" />
@@ -15,7 +15,6 @@
 
 JianShu: [http://www.jianshu.com/p/2974d8ffc3a5](http://www.jianshu.com/p/2974d8ffc3a5)
 
-Personal WebSite: [http://blog.lauzy.me/2017/04/14/201705Behavior/](http://blog.lauzy.me/2017/04/14/201705Behavior/)
 
 ## Download
 ```java
