@@ -50,9 +50,21 @@ public class Demo3ActivityWithFragment extends AppCompatActivity implements Bott
         onNavigationItemSelected(item);//默认选中第一个
         mBottomMainNavigation.setOnNavigationItemSelectedListener(this);
 
-        mToolBarBehavior.setMinScrollY(20).setScrollYDistance(100).setDuration(1000).setInterpolator(new BounceInterpolator());
-        mBottomBehavior.setMinScrollY(20).setScrollYDistance(100).setDuration(1000).setInterpolator(new BounceInterpolator());
-        CommonBehavior.from(mFloatingActionButton).setMinScrollY(20).setScrollYDistance(100).setDuration(1000).setInterpolator(new BounceInterpolator());
+        mToolBarBehavior.setMinScrollY(50);
+        mToolBarBehavior.setScrollYDistance(100);
+        mToolBarBehavior.setDuration(1000);
+        mToolBarBehavior.setInterpolator(new BounceInterpolator());
+
+        mBottomBehavior.setMinScrollY(20);
+        mBottomBehavior.setScrollYDistance(100);
+        mBottomBehavior.setDuration(1000);
+        mBottomBehavior.setInterpolator(new BounceInterpolator());
+
+        CommonBehavior floatActionBehavior = CommonBehavior.from(mFloatingActionButton);
+        floatActionBehavior.setMinScrollY(20);
+        floatActionBehavior.setScrollYDistance(100);
+        floatActionBehavior.setDuration(1000);
+        floatActionBehavior.setInterpolator(new BounceInterpolator());
     }
 
     @Override
@@ -63,19 +75,19 @@ public class Demo3ActivityWithFragment extends AppCompatActivity implements Bott
         switch (item.getItemId()) {
             case R.id.menu_main_item_beauty:
                 mToolbar.setVisibility(View.VISIBLE);
-                mToolBarBehavior.setCanScroll(true);
+                mToolBarBehavior.isEnableScroll(true);
                 transaction.show(mDemo1Fragment).hide(mDemo2Fragment)
                         .hide(mDemo3Fragment).hide(mDemo4Fragment);
                 break;
             case R.id.menu_main_item_android:
                 mToolbar.setVisibility(View.VISIBLE);
-                mToolBarBehavior.setCanScroll(false);
+                mToolBarBehavior.isEnableScroll(false);
                 transaction.show(mDemo2Fragment).hide(mDemo3Fragment)
                         .hide(mDemo1Fragment).hide(mDemo4Fragment);
                 break;
             case R.id.menu_main_item_category:
                 mToolbar.setVisibility(View.GONE);//隐藏测试fragment中动画
-                mToolBarBehavior.setCanScroll(false);
+                mToolBarBehavior.isEnableScroll(false);
                 transaction.show(mDemo3Fragment).hide(mDemo2Fragment)
                         .hide(mDemo1Fragment).hide(mDemo4Fragment);
                 break;

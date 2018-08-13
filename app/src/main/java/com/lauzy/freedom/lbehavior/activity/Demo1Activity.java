@@ -30,7 +30,7 @@ public class Demo1Activity extends AppCompatActivity implements View.OnClickList
         FloatingActionButton fab4 = (FloatingActionButton) findViewById(R.id.fab4_mode);
         fab4.setOnClickListener(this);
 
-        CommonBehavior.from(fab4).setCanScroll(false);//禁止右上角悬浮按钮动画
+        CommonBehavior.from(fab4).isEnableScroll(false);//禁止右上角悬浮按钮动画
         loadData();
     }
 

@@ -1,6 +1,5 @@
 package com.lauzy.freedom.lbehaviorlib.behavior;
 
-
 import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.view.animation.LinearOutSlowInInterpolator;
@@ -11,42 +10,21 @@ import android.view.animation.Interpolator;
 
 import com.lauzy.freedom.lbehaviorlib.anim.CommonAnim;
 
-@SuppressWarnings("unused")
 public class CommonBehavior extends CoordinatorLayout.Behavior<View> {
-    private static final String LYTAG = LTitleBehavior.class.getSimpleName();
+    private static final String TAG = "CommonBehavior";
     protected CommonAnim mCommonAnim;
     private boolean isHide;
-    private boolean canScroll = true;
+    private boolean isEnableScroll = true;
     private int mTotalScrollY;
     protected boolean isInit = true; //防止new Anim导致的parent 和child坐标变化
 
     private int mDuration = 400;
     private Interpolator mInterpolator = new LinearOutSlowInInterpolator();
-    private int minScrollY = 5;//触发滑动动画最小距离
-    private int scrollYDistance = 40;//设置最小滑动距离
+    private int mMinScrollY = 5;//触发滑动动画最小距离
+    private int mScrollYDistance = 40;//设置最小滑动距离
 
     public CommonBehavior(Context context, AttributeSet attrs) {
         super(context, attrs);
-    }
-
-    public CommonBehavior setDuration(int duration) {
-        mDuration = duration;
-        return this;
-    }
-
-    public CommonBehavior setInterpolator(Interpolator interpolator) {
-        mInterpolator = interpolator;
-        return this;
-    }
-
-    public CommonBehavior setMinScrollY(int minScrollY) {
-        this.minScrollY = minScrollY;
-        return this;
-    }
-
-    public CommonBehavior setScrollYDistance(int scrollYDistance) {
-        this.scrollYDistance = scrollYDistance;
-        return this;
     }
 
     @Override
@@ -90,23 +68,25 @@ public class CommonBehavior extends CoordinatorLayout.Behavior<View> {
     public void onNestedScroll(CoordinatorLayout coordinatorLayout, View child, View target,
                                int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed) {
         super.onNestedScroll(coordinatorLayout, child, target, dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed);
-        if (canScroll) {
-            mTotalScrollY += dyConsumed;
-            if (Math.abs(dyConsumed) > minScrollY || Math.abs(mTotalScrollY) > scrollYDistance) {
-                if (dyConsumed < 0) {
-                    if (isHide) {
-                        mCommonAnim.show();
-                        isHide = false;
-                    }
-                } else if (dyConsumed > 0) {
-                    if (!isHide) {
-                        mCommonAnim.hide();
-                        isHide = true;
-                    }
-                }
-                mTotalScrollY = 0;
+        if (!isEnableScroll) {
+            return;
+        }
+        mTotalScrollY += dyConsumed;
+        if (Math.abs(dyConsumed) < mMinScrollY && Math.abs(mTotalScrollY) < mScrollYDistance) {
+            return;
+        }
+        if (dyConsumed < 0) {
+            if (isHide) {
+                mCommonAnim.show();
+                isHide = false;
+            }
+        } else if (dyConsumed > 0) {
+            if (!isHide) {
+                mCommonAnim.hide();
+                isHide = true;
             }
         }
+        mTotalScrollY = 0;
     }
 
     @Override
@@ -114,22 +94,24 @@ public class CommonBehavior extends CoordinatorLayout.Behavior<View> {
         super.onStopNestedScroll(coordinatorLayout, child, target);
     }
 
-    public void setCanScroll(boolean canScroll) {
-        this.canScroll = canScroll;
+    public void isEnableScroll(boolean isEnableScroll) {
+        this.isEnableScroll = isEnableScroll;
     }
 
     public void show() {
-        if (mCommonAnim != null) {
-            isHide = false;
-            mCommonAnim.show();
+        if (mCommonAnim == null) {
+            return;
         }
+        isHide = false;
+        mCommonAnim.show();
     }
 
     public void hide() {
-        if (mCommonAnim != null) {
-            isHide = true;
-            mCommonAnim.hide();
+        if (mCommonAnim == null) {
+            return;
         }
+        isHide = true;
+        mCommonAnim.hide();
     }
 
     public static CommonBehavior from(View view) {
@@ -143,5 +125,22 @@ public class CommonBehavior extends CoordinatorLayout.Behavior<View> {
                     "Try to check the [app:layout_behavior]");
         }
         return (CommonBehavior) behavior;
+    }
+
+    /*--- settings ---*/
+    public void setDuration(int duration) {
+        mDuration = duration;
+    }
+
+    public void setInterpolator(Interpolator interpolator) {
+        mInterpolator = interpolator;
+    }
+
+    public void setMinScrollY(int minScrollY) {
+        mMinScrollY = minScrollY;
+    }
+
+    public void setScrollYDistance(int scrollYDistance) {
+        mScrollYDistance = scrollYDistance;
     }
 }

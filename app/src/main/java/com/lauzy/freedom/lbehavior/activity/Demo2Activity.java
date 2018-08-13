@@ -61,8 +61,12 @@ public class Demo2Activity extends AppCompatActivity implements View.OnClickList
         CommonBehavior.from(mFab4).setInterpolator(new BounceInterpolator());
         CommonBehavior.from(mFab4).setDuration(800);
 
-        CommonBehavior.from(mToolbar).setDuration(500).setInterpolator(new BounceInterpolator());
-        CommonBehavior.from(mLayoutBottom).setDuration(600).setInterpolator(new LinearInterpolator());
+        CommonBehavior behavior1 = CommonBehavior.from(mToolbar);
+        behavior1.setDuration(500);
+        behavior1.setInterpolator(new BounceInterpolator());
+        CommonBehavior behavior2 = CommonBehavior.from(mLayoutBottom);
+        behavior2.setDuration(600);
+        behavior2.setInterpolator(new LinearInterpolator());
     }
 
     private void loadData() {
