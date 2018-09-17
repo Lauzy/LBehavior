@@ -75,13 +75,13 @@ Custom properties(All have default values)：
 
     CommonBehavior behavior = CommonBehavior.from(mFloatingActionButton)；
 
-	behavior.show();//show the view
-	behavior.hide();//hide
+    behavior.show();//show the view
+    behavior.hide();//hide
 
     behavior.setMinScrollY(20)
     behavior.setScrollYDistance(100)
-	behavior.setDuration(1000)
-	behavior.setInterpolator(new LinearOutSlowInInterpolator());
+    behavior.setDuration(1000)
+    behavior.setInterpolator(new LinearOutSlowInInterpolator());
 
 ```
 
