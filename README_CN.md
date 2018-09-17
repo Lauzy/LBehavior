@@ -74,14 +74,16 @@
 
 ```java
 
-	CommonBehavior.from(mFloatingActionButton).show();//代码控制显示
-	CommonBehavior.from(mFloatingActionButton).hide();//隐藏
+    CommonBehavior behavior = CommonBehavior.from(mFloatingActionButton)；
 
-	CommonBehavior.from(mFloatingActionButton)
-		.setMinScrollY(20)
-		.setScrollYDistance(100)
-		.setDuration(1000)
-		.setInterpolator(new LinearOutSlowInInterpolator());
+    behavior.show();//代码控制显示
+    behavior.hide();//隐藏
+
+    behavior.setMinScrollY(20)
+    behavior.setScrollYDistance(100)
+    behavior.setDuration(1000)
+    behavior.setInterpolator(new LinearOutSlowInInterpolator());
+
 ```
 
 ## Tips

@@ -5,8 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/LBehavior.iml" filepath="$PROJECT_DIR$/.idea/LBehavior.iml" />
       <module fileurl="file://$PROJECT_DIR$/LBehavior.iml" filepath="$PROJECT_DIR$/LBehavior.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lbehaviorlib/lbehaviorlib.iml" filepath="$PROJECT_DIR$/lbehaviorlib/lbehaviorlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/lbehaviorlib/lbehaviorlib.iml" filepath="$PROJECT_DIR$/lbehaviorlib/lbehaviorlib.iml" />
     </modules>
   </component>
