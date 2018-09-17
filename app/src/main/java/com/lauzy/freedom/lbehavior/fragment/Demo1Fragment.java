@@ -63,7 +63,7 @@ public class Demo1Fragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mRecyclerView = ((RecyclerView) view.findViewById(R.id.rv_fragment1));
+        mRecyclerView = view.findViewById(R.id.rv_fragment1);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mActivity));
         mRecyclerView.setAdapter(new DemoAdapter(mActivity));
         mRecyclerView.addItemDecoration(new DemoItemDecoration(mActivity));

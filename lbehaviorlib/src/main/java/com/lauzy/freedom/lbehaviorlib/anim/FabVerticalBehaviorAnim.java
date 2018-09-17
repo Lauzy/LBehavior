@@ -3,13 +3,21 @@ package com.lauzy.freedom.lbehaviorlib.anim;
 import android.animation.ValueAnimator;
 import android.view.View;
 
-public class LFabVerticalBehaviorAnim extends CommonAnim {
+import com.lauzy.freedom.lbehaviorlib.IBehaviorAnim;
+
+/**
+ * Desc : FloatingActionBar 垂直动画
+ * Author : lauzy
+ * Date : 2018/9/17
+ * Email : freedompaladin@gmail.com
+ */
+public class FabVerticalBehaviorAnim extends AbsBehaviorAnim implements IBehaviorAnim {
 
     private float mViewY;
     private View mFabView;
     private float mOriginalY;
 
-    public LFabVerticalBehaviorAnim(View parentView, View fabView) {
+    public FabVerticalBehaviorAnim(View parentView, View fabView) {
         mFabView = fabView;
         if (parentView != null && fabView != null) {
             mViewY = parentView.getHeight() - fabView.getY();

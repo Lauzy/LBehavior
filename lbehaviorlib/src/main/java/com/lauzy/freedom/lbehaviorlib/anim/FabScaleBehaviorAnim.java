@@ -4,16 +4,18 @@ import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPropertyAnimatorListener;
 import android.view.View;
 
+import com.lauzy.freedom.lbehaviorlib.IBehaviorAnim;
+
 /**
- * fab Anim
+ * FloatingActionBar 缩放动画
  * Created by Lauzy on 2017/3/15.
  */
 
-public class LFabScaleBehaviorAnim extends CommonAnim {
+public class FabScaleBehaviorAnim extends AbsBehaviorAnim implements IBehaviorAnim {
 
     private View mFabView;
 
-    public LFabScaleBehaviorAnim(View fabView) {
+    public FabScaleBehaviorAnim(View fabView) {
         mFabView = fabView;
     }
 

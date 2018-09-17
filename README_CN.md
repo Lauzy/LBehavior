@@ -26,8 +26,7 @@
 	}
 
     dependencies {
-        compile 'com.android.support:design:25.3.1'(latestVersion)
-        compile 'com.github.Lauzy:LBehavior:VERSION_CODE'
+        implementation 'com.github.Lauzy:LBehavior:VERSION_CODE'
 	}
 ```
 最新版本号，点击[这里](https://github.com/Lauzy/LBehavior/releases)

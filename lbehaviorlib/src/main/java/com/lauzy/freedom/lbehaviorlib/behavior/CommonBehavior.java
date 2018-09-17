@@ -1,22 +1,25 @@
 package com.lauzy.freedom.lbehaviorlib.behavior;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.v4.view.ViewCompat;
 import android.support.v4.view.animation.LinearOutSlowInInterpolator;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Interpolator;
 
-import com.lauzy.freedom.lbehaviorlib.anim.CommonAnim;
+import com.lauzy.freedom.lbehaviorlib.IBehavior;
+import com.lauzy.freedom.lbehaviorlib.IBehaviorAnim;
 
-public class CommonBehavior extends CoordinatorLayout.Behavior<View> {
+public abstract class CommonBehavior extends CoordinatorLayout.Behavior<View> implements IBehavior {
     private static final String TAG = "CommonBehavior";
-    protected CommonAnim mCommonAnim;
+    private IBehaviorAnim mIBehaviorAnim;
     private boolean isHide;
     private boolean isEnableScroll = true;
     private int mTotalScrollY;
-    protected boolean isInit = true; //防止new Anim导致的parent 和child坐标变化
+    private boolean isInit = true; //防止new Anim导致的parent 和child坐标变化
 
     private int mDuration = 400;
     private Interpolator mInterpolator = new LinearOutSlowInInterpolator();
@@ -28,8 +31,14 @@ public class CommonBehavior extends CoordinatorLayout.Behavior<View> {
     }
 
     @Override
-    public boolean layoutDependsOn(CoordinatorLayout parent, View child, View dependency) {
-        return super.layoutDependsOn(parent, child, dependency);
+    public boolean onStartNestedScroll(@NonNull CoordinatorLayout coordinatorLayout,
+                                       @NonNull View child, @NonNull View directTargetChild,
+                                       @NonNull View target, int axes, int type) {
+        if (isInit) {
+            mIBehaviorAnim = createBehaviorAnim(coordinatorLayout, child);
+            isInit = false;
+        }
+        return (axes & ViewCompat.SCROLL_AXIS_VERTICAL) != 0;
     }
 
     /**
@@ -43,15 +52,14 @@ public class CommonBehavior extends CoordinatorLayout.Behavior<View> {
      * @param consumed          父布局消费的滑动距离，consumed[0]和consumed[1]代表X和Y方向父布局消费的距离，默认为0
      */
     @Override
-    public void onNestedPreScroll(CoordinatorLayout coordinatorLayout, View child, View target,
-                                  int dx, int dy, int[] consumed) {
-        if (mCommonAnim != null) {
-            mCommonAnim.setDuration(mDuration);
-            mCommonAnim.setInterpolator(mInterpolator);
-        }
-        super.onNestedPreScroll(coordinatorLayout, child, target, dx, dy, consumed);
+    public void onNestedPreScroll(@NonNull CoordinatorLayout coordinatorLayout,
+                                  @NonNull View child, @NonNull View target, int dx, int dy,
+                                  @NonNull int[] consumed, int type) {
+        super.onNestedPreScroll(coordinatorLayout, child, target, dx, dy, consumed,
+                ViewCompat.TYPE_TOUCH);
+        mIBehaviorAnim.setDuration(mDuration);
+        mIBehaviorAnim.setInterpolator(mInterpolator);
     }
-
 
     /**
      * 滑动嵌套滚动时触发的方法
@@ -64,10 +72,13 @@ public class CommonBehavior extends CoordinatorLayout.Behavior<View> {
      * @param dxUnconsumed      未被TargetView消费的X轴距离
      * @param dyUnconsumed      未被TargetView消费的Y轴距离(如RecyclerView已经到达顶部或底部，而用户继续滑动，此时dyUnconsumed的值不为0，可处理一些越界事件)
      */
+
     @Override
-    public void onNestedScroll(CoordinatorLayout coordinatorLayout, View child, View target,
-                               int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed) {
-        super.onNestedScroll(coordinatorLayout, child, target, dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed);
+    public void onNestedScroll(@NonNull CoordinatorLayout coordinatorLayout, @NonNull View child,
+                               @NonNull View target, int dxConsumed, int dyConsumed,
+                               int dxUnconsumed, int dyUnconsumed, int type) {
+        super.onNestedScroll(coordinatorLayout, child, target, dxConsumed, dyConsumed,
+                dxUnconsumed, dyUnconsumed, ViewCompat.TYPE_TOUCH);
         if (!isEnableScroll) {
             return;
         }
@@ -77,41 +88,20 @@ public class CommonBehavior extends CoordinatorLayout.Behavior<View> {
         }
         if (dyConsumed < 0) {
             if (isHide) {
-                mCommonAnim.show();
+                mIBehaviorAnim.show();
                 isHide = false;
             }
         } else if (dyConsumed > 0) {
             if (!isHide) {
-                mCommonAnim.hide();
+                mIBehaviorAnim.hide();
                 isHide = true;
             }
         }
         mTotalScrollY = 0;
     }
 
-    @Override
-    public void onStopNestedScroll(CoordinatorLayout coordinatorLayout, View child, final View target) {
-        super.onStopNestedScroll(coordinatorLayout, child, target);
-    }
-
     public void isEnableScroll(boolean isEnableScroll) {
         this.isEnableScroll = isEnableScroll;
-    }
-
-    public void show() {
-        if (mCommonAnim == null) {
-            return;
-        }
-        isHide = false;
-        mCommonAnim.show();
-    }
-
-    public void hide() {
-        if (mCommonAnim == null) {
-            return;
-        }
-        isHide = true;
-        mCommonAnim.hide();
     }
 
     public static CommonBehavior from(View view) {
@@ -127,14 +117,33 @@ public class CommonBehavior extends CoordinatorLayout.Behavior<View> {
         return (CommonBehavior) behavior;
     }
 
-    /*--- settings ---*/
+    @Override
+    public void show() {
+        if (mIBehaviorAnim == null) {
+            return;
+        }
+        isHide = false;
+        mIBehaviorAnim.show();
+    }
+
+    @Override
+    public void hide() {
+        if (mIBehaviorAnim == null) {
+            return;
+        }
+        isHide = true;
+        mIBehaviorAnim.hide();
+    }
+
+    /*--------------Settings--------------*/
+    public void setInterpolator(Interpolator interpolator) {
+        mInterpolator = interpolator;
+    }
+
     public void setDuration(int duration) {
         mDuration = duration;
     }
 
-    public void setInterpolator(Interpolator interpolator) {
-        mInterpolator = interpolator;
-    }
 
     public void setMinScrollY(int minScrollY) {
         mMinScrollY = minScrollY;
@@ -143,4 +152,5 @@ public class CommonBehavior extends CoordinatorLayout.Behavior<View> {
     public void setScrollYDistance(int scrollYDistance) {
         mScrollYDistance = scrollYDistance;
     }
+
 }

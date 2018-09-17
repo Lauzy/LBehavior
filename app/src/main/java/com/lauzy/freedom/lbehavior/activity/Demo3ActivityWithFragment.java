@@ -38,10 +38,10 @@ public class Demo3ActivityWithFragment extends AppCompatActivity implements Bott
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_demo_fragment_activity);
-        mFrameLayout = (FrameLayout) findViewById(R.id.frame_main);
-        mFloatingActionButton = (FloatingActionButton) findViewById(R.id.fab_mode);
-        mToolbar = (Toolbar) findViewById(R.id.toolbar_common);
-        mBottomMainNavigation = (BottomNavigationView) findViewById(R.id.bottom_main_navigation);
+        mFrameLayout = findViewById(R.id.frame_main);
+        mFloatingActionButton = findViewById(R.id.fab_mode);
+        mToolbar = findViewById(R.id.toolbar_common);
+        mBottomMainNavigation = findViewById(R.id.bottom_main_navigation);
         loadFragment(savedInstanceState);
 
         mToolBarBehavior = CommonBehavior.from(mToolbar);

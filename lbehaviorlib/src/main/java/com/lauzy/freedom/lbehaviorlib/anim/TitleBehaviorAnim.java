@@ -3,25 +3,32 @@ package com.lauzy.freedom.lbehaviorlib.anim;
 import android.animation.ValueAnimator;
 import android.view.View;
 
-public class LBottomBehaviorAnim extends CommonAnim {
+import com.lauzy.freedom.lbehaviorlib.IBehaviorAnim;
 
-    private View mBottomView;
-    private float mOriginalY;
+/**
+ * Desc : 标题栏动画
+ * Author : lauzy
+ * Date : 2018/9/17
+ * Email : freedompaladin@gmail.com
+ */
+public class TitleBehaviorAnim extends AbsBehaviorAnim implements IBehaviorAnim {
 
-    public LBottomBehaviorAnim(View bottomView) {
-        mBottomView = bottomView;
-        mOriginalY = mBottomView.getY();
+    private View mHeadView;
+
+    public TitleBehaviorAnim(View headView) {
+        mHeadView = headView;
     }
+
 
     @Override
     public void show() {
-        ValueAnimator animator = ValueAnimator.ofFloat(mBottomView.getY(), mOriginalY);
+        ValueAnimator animator = ValueAnimator.ofFloat(mHeadView.getY(), 0);
         animator.setDuration(getDuration());
         animator.setInterpolator(getInterpolator());
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                mBottomView.setY((Float) valueAnimator.getAnimatedValue());
+                mHeadView.setY((Float) valueAnimator.getAnimatedValue());
             }
         });
         animator.start();
@@ -29,13 +36,13 @@ public class LBottomBehaviorAnim extends CommonAnim {
 
     @Override
     public void hide() {
-        ValueAnimator animator = ValueAnimator.ofFloat(mBottomView.getY(), mOriginalY + mBottomView.getHeight());
+        ValueAnimator animator = ValueAnimator.ofFloat(mHeadView.getY(), -mHeadView.getHeight());
         animator.setDuration(getDuration());
         animator.setInterpolator(getInterpolator());
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                mBottomView.setY((Float) valueAnimator.getAnimatedValue());
+                mHeadView.setY((Float) valueAnimator.getAnimatedValue());
             }
         });
         animator.start();

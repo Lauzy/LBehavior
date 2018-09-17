@@ -26,8 +26,7 @@ JianShu: [http://www.jianshu.com/p/2974d8ffc3a5](http://www.jianshu.com/p/2974d8
 	}
 
     dependencies {
-        compile 'com.android.support:design:25.3.1'(latestVersion)
-        compile 'com.github.Lauzy:LBehavior:VERSION_CODE'
+        implementation 'com.github.Lauzy:LBehavior:VERSION_CODE'
 	}
 ```
 The version code of the latest release can be found [here](https://github.com/Lauzy/LBehavior/releases)

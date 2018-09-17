@@ -23,11 +23,11 @@ public class Demo1Activity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo1);
-        mRecyclerView = (RecyclerView) findViewById(R.id.rv_demo1);
+        mRecyclerView = findViewById(R.id.rv_demo1);
         findViewById(R.id.fab_mode).setOnClickListener(this);
         findViewById(R.id.fab2_mode).setOnClickListener(this);
         findViewById(R.id.fab3_mode).setOnClickListener(this);
-        FloatingActionButton fab4 = (FloatingActionButton) findViewById(R.id.fab4_mode);
+        FloatingActionButton fab4 = findViewById(R.id.fab4_mode);
         fab4.setOnClickListener(this);
 
         CommonBehavior.from(fab4).isEnableScroll(false);//禁止右上角悬浮按钮动画
